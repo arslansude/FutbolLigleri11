@@ -1,0 +1,34 @@
+<main>
+  <h1>Takımlar</h1>
+  <p class="page-description">
+    Daha önce oynanan oyunlar ve sonuçları bu sayfada bulunur.
+  </p>
+  <hr>
+  <table class="table table-striped" >
+    <caption>Takımlar ve Puanları</caption>
+    <thead>
+    <tr colspan="2">
+      <th>Takım</th>
+      <th>Skor</th>
+    <tr *ngFor="let teams of team">
+      <td> {{teams.takimadi}} </td>
+      <td>{{teams.takimskor}}</td>
+    </tr>
+    </thead>
+    </table>
+  <table class="table table-striped" style="float:left">
+    <caption>Gelecek hafta eşleşmeleri</caption>
+    <thead>
+    <tr colspan="2">
+      <th>Birinci Takım</th>
+      <th>İkinci Takım</th>
+    <tr *ngFor="let teams of firstHalf">
+      <td> {{teams.takimadi}} </td>
+    <tr *ngFor="let teams of secondHalf">
+      <td>{{teams.takimadi}}</td>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</main>

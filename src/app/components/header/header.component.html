@@ -1,0 +1,43 @@
+<header class="header">
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <ul class="header-menu">
+          <li>
+            <a routerLink="/">Anasayfa</a>
+          </li>
+        </ul>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_on</mat-icon>
+        <ul class="header-menu">
+          <li>
+            <a routerLink="/about">Hakkında</a>
+          </li>
+        </ul>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>interpreter_mode</mat-icon>
+        <ul class="header-menu">
+          <li>
+            <a routerLink="/teams">Takımlar</a>
+          </li>
+        </ul>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>question_answer</mat-icon>
+        <ul class="header-menu">
+          <li>
+            <a routerLink="/anketler">Anketler</a>
+          </li>
+        </ul>
+      </button>
+    </mat-menu>
+    <span>Futbolik</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</header>
