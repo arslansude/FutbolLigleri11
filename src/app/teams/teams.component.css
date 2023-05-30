@@ -6,4 +6,16 @@
   border-collapse: collapse;
   caption-side: top;
   width: 50px;
+  position: relative;
+  float: left;
+  background-color: antiquewhite;
+}
+.table.table-striped-columns{
+  border:3px solid black;
+  margin-left: 300px;
+  margin-top: 50px;
+  font-size: 20px;
+  position: relative;
+  float: left;
+  background-color: antiquewhite;
 }

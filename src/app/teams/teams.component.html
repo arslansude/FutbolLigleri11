@@ -16,17 +16,19 @@
     </tr>
     </thead>
     </table>
-  <table class="table table-striped" style="float:left">
+  <table class="table table-striped-columns">
     <caption>Gelecek hafta eşleşmeleri</caption>
     <thead>
-    <tr colspan="2">
+    <tr>
       <th>Birinci Takım</th>
       <th>İkinci Takım</th>
-    <tr *ngFor="let teams of firstHalf">
-      <td> {{teams.takimadi}} </td>
-    <tr *ngFor="let teams of secondHalf">
-      <td>{{teams.takimadi}}</td>
     </tr>
+    <ng-container *ngFor="let team of firstHalf; let i = index">
+      <tr>
+        <td>{{ team.takimadi }}</td>
+        <td>{{ secondHalf[i]?.takimadi }}</td>
+      </tr>
+    </ng-container>
     </thead>
     <tbody>
     </tbody>

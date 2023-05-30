@@ -17,7 +17,6 @@ export class TeamsComponent implements OnInit{
   // @ts-ignore
   secondHalf: any[];
   constructor(private teamsService: TeamsServices) {}
-  // @ts-ignore
   ngOnInit():void {
     // @ts-ignore
     this.getTeams();
@@ -25,6 +24,13 @@ export class TeamsComponent implements OnInit{
     this.getFirstHalf();
     // @ts-ignore
     this.getSecondHalf();
+    // @ts-ignore
+    const length: number = teams.size();
+    const middle: number = Math.floor(length / 2);
+    // @ts-ignore
+    const firstHalf: Teams[] = teams.slice(0, middle);
+    // @ts-ignore
+    const secondHalf: Teams[] = teams.slice(middle, length)
   }
     private getTeams() {
       // @ts-ignore
