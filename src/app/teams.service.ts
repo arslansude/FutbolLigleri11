@@ -21,4 +21,8 @@ export class TeamsServices {
     // @ts-ignore
     return this.httpClient.get(`${this.baseURL}`);
   }
+  getRandomDates(): Observable<Teams[]> {
+    // @ts-ignore
+    return this.httpClient.get<string[]>(`${this.baseURL}`);
+  }
 }

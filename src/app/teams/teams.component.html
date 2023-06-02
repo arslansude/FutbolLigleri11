@@ -22,11 +22,13 @@
     <tr>
       <th>Birinci Takım</th>
       <th>İkinci Takım</th>
+      <th>Tarih</th>
     </tr>
     <ng-container *ngFor="let team of firstHalf; let i = index">
       <tr>
         <td>{{ team.takimadi }}</td>
         <td>{{ secondHalf[i]?.takimadi }}</td>
+        <td>{{ dates[i] }}</td>
       </tr>
     </ng-container>
     </thead>
