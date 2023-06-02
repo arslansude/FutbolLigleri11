@@ -34,9 +34,16 @@ export class TeamsComponent implements OnInit {
     const firstHalf: Teams[] = teams.slice(0, middle);
     // @ts-ignore
     const secondHalf: Teams[] = teams.slice(middle, length)
-      const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-      // @ts-ignore
-    return new Date(date).toLocaleDateString('tr-TR', options);
+    const formatter = new Intl.DateTimeFormat('en', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    const currentDate = new Date();
+    const randomDates: string[] = [];
+    const uniqueDates: Set<string> = new Set();
+    // @ts-ignore
+    const formattedDate = formatter.format(randomDate);
+    uniqueDates.add(formattedDate);
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    currentDate.getDate() + Math.floor(Math.random() * 30)
   }
   private getTeams() {
     // @ts-ignore
